@@ -16,7 +16,7 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">
-            $(function(){
+           $(function(){
                 function camSuccess(imgData){
                     $("#img_camPH").attr("src",imgData);
                     
@@ -39,24 +39,66 @@
                 $("#btn_camera").on("click", accessCamera);
               
             });
-            
-
         </script>
 
         <title>Hello World</title>
+        <style>
+        img {
+            width: 100%;
+            margin-top: 80px;
+            }
+        </style>
     </head>
     <body>
 
+        <div data-role="page" id="pageone">
+          <div data-role="header">
+            
+            <div data-role="navbar" data-iconpos="top">
+              <ul>
+                <li><a href="#" data-icon="home">Status</a></li>
+                <li><a href="#pagetwo" data-icon="comment">Chats</a></li>
+                <li><a href="#pagethree" data-icon="camera">Camera</a></li>
+              </ul>
+            </div>
+          </div>
 
-       
-        <div data-role="page">
+          <div data-role="main" class="ui-content">
+              <img src="jq1.png" alt="bib"   >
+            
+          </div>
+        </div> 
+        
+        <div data-role="page" id="pagetwo">
+          <div data-role="header">
+            
+            <div data-role="navbar" data-iconpos="top">
+              <ul>
+                <li><a href="#pageone" data-icon="home">Status</a></li>
+                <li><a href="#" data-icon="comment">Chats</a></li>
+                <li><a href="#pagethree" data-icon="camera">Camera</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div data-role="main" class="ui-content">
+        
+          </div>
+        </div> 
+
+        <div data-role="page" id="pagethree" >
             <div data-role="header">
-            <h1>Camera app</h1>
+                <div data-role="navbar" data-iconpos="top">
+                  <ul>
+                    <li><a href="#pageone" data-icon="home">Status</a></li>
+                    <li><a href="#pagetwo" data-icon="comment">Chats</a></li>
+                    <li><a href="#" data-icon="camera">Camera</a></li>
+                  </ul>
+                </div>
             </div>
             <div class="ui-content">
-                <button id="btn_camera">Camera</button>
-                <img id="img_camPH">
-
+                <img id="img_camPH" src="http://placehold.it/300x250">
+				<button id="btn_camera">Camera</button>
             </div>
         </div>
     </body>
